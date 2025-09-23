@@ -123,7 +123,7 @@ func (s *SupplierService) CreateSupplier(ctx context.Context, request *ms.Suppli
 					JobPosition:  contact.JobPosition,
 					Email:        contact.Email,
 					PhoneNumber:  utils.FormatPhoneNumber(contact.PhoneNumber),
-					MobileNumber: contact.MobileNumber,
+					MobileNumber: utils.FormatPhoneNumber(contact.MobileNumber),
 					IsMain:       contact.IsMain,
 				})
 				if err != nil {
